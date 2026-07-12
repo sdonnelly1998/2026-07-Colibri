@@ -1,0 +1,25 @@
+bundle:
+  name: colibri_wind
+
+include:
+  - resources/*.yml
+  - config/*.target.yml
+
+variables:
+  catalog:
+    description: Unity Catalog catalog for all pipeline tables.
+  bronze_schema:
+    description: Schema for raw ingest tables and landing volumes.
+    default: colibri_bronze
+  silver_schema:
+    description: Schema for cleansed and conformed tables.
+    default: colibri_silver
+  gold_schema:
+    description: Schema for analytics-ready outputs.
+    default: colibri_gold
+  raw_volume:
+    description: Managed volume used for incoming CSV files.
+    default: turbine_raw
+  checkpoint_volume:
+    description: Managed volume used for Auto Loader checkpoints.
+    default: turbine_checkpoints

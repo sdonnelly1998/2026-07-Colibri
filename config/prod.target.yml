@@ -1,0 +1,9 @@
+targets:
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    resources:
+      jobs:
+        colibri_wind_pipeline:
+          performance_target: STANDARD

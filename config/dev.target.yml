@@ -1,0 +1,11 @@
+targets:
+  dev:
+    default: true
+    resources:
+      jobs:
+        colibri_wind_pipeline:
+          performance_target: PERFORMANCE_OPTIMIZED
+    variables:
+      bronze_schema: colibri_bronze_dev
+      silver_schema: colibri_silver_dev
+      gold_schema: colibri_gold_dev

@@ -1,0 +1,14 @@
+resources:
+  volumes:
+    raw_volume:
+      catalog_name: ${var.catalog}
+      schema_name: ${var.bronze_schema}
+      name: ${var.raw_volume}
+      volume_type: MANAGED
+      comment: Landing area for appended turbine CSV files.
+    checkpoint_volume:
+      catalog_name: ${var.catalog}
+      schema_name: ${var.bronze_schema}
+      name: ${var.checkpoint_volume}
+      volume_type: MANAGED
+      comment: Auto Loader schema and checkpoint state.

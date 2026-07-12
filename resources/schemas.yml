@@ -1,0 +1,14 @@
+resources:
+  schemas:
+    bronze:
+      name: ${var.bronze_schema}
+      catalog_name: ${var.catalog}
+      comment: Raw turbine telemetry ingested from appended CSV files.
+    silver:
+      name: ${var.silver_schema}
+      catalog_name: ${var.catalog}
+      comment: Cleansed turbine measurements, rejected rows, and missing hours.
+    gold:
+      name: ${var.gold_schema}
+      catalog_name: ${var.catalog}
+      comment: Analytics-ready wind farm summary and anomaly outputs.
